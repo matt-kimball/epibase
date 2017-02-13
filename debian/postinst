@@ -1,0 +1,7 @@
+#!/bin/sh
+
+systemctl enable epipylon-resize-fs.service
+
+systemctl enable epipylon-apt-update.timer
+systemctl start epipylon-apt-update.timer
+

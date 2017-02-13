@@ -1,0 +1,12 @@
+[Unit]
+Description=Update system software packages
+After=network.target
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=55min
+AccuracySec=10min
+Unit=epipylon-apt-update.service
+
+[Install]
+WantedBy=multi-user.target

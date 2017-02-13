@@ -1,0 +1,6 @@
+#!/bin/sh
+
+systemctl disable epipylon-apt-update.timer
+systemctl stop epipylon-apt-update.timer
+
+systemctl disable epipylon-resize-fs.service

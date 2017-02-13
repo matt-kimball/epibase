@@ -1,0 +1,7 @@
+[Unit]
+Description=Update system software packages
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/epipylon-apt-update
+StandardError=syslog

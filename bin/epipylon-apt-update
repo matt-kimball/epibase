@@ -1,0 +1,6 @@
+#!/bin/sh
+
+DL_LIMIT="-o Acquire::http::Dl-Limit=16"
+
+apt-get $DL_LIMIT update
+DEBIAN_FRONTEND=noninteractive apt-get $DL_LIMIT --yes dist-upgrade

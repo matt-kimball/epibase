@@ -1,0 +1,10 @@
+[Unit]
+Description=Resize root filesystem
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/epipylon-resize-fs
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

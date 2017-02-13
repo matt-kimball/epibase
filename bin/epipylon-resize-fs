@@ -1,0 +1,6 @@
+#!/bin/sh
+
+END_SECTOR="$(expr $(cat /sys/block/mmcblk0/size) - 1)"
+
+parted -m /dev/mmcblk0 u s resizepart 2 $END_SECTOR
+resize2fs /dev/mmcblk0p2
