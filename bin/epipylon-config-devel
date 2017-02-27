@@ -1,0 +1,6 @@
+#!/bin/sh
+
+wget http://archive.raspbian.org/raspbian.public.key -O - | apt-key add -
+cat <<END_SOURCES >>/etc/apt/sources.list
+deb http://archive.raspbian.org/raspbian jessie main
+END_SOURCES

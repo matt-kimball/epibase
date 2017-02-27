@@ -6,7 +6,12 @@ PACKAGE=epibase_$VERSION-$TIMESTAMP
 
 BINS="\
     bin/epipylon-apt-update \
+    bin/epipylon-config-devel \
     bin/epipylon-resize-fs"
+
+BOOT="\
+    boot/cmdline.txt
+    boot/config.txt"
 
 SYSTEMD="\
     systemd/epipylon-apt-update.service \
@@ -35,6 +40,9 @@ CONTROL_END
 
 chmod a+rx $DEBIAN
 cp $DEBIAN $PACKAGE/DEBIAN
+
+mkdir -p $PACKAGE/boot
+cp $BOOT $PACKAGE/boot
 
 mkdir -p $PACKAGE/usr/sbin
 cp $BINS $PACKAGE/usr/sbin
