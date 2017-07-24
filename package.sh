@@ -6,7 +6,7 @@ PACKAGE=epibase_$VERSION-$TIMESTAMP
 
 BINS="\
     bin/epipylon-apt-update \
-    bin/epipylon-config-devel \
+    bin/epipylon-config-raspbian \
     bin/epipylon-resize-fs"
 
 BOOT="\
