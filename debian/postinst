@@ -1,5 +1,8 @@
 #!/bin/sh
 
+cp /usr/share/boot/cmdline.txt /boot/cmdline.txt
+cp /usr/share/boot/config.txt /boot/config.txt
+
 systemctl enable epipylon-resize-fs.service
 
 systemctl enable epipylon-apt-update.timer
